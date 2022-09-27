@@ -1,0 +1,99 @@
+1. from books_authors_app.models import *
+2. Book.objects.create(title="C Sharp", desc="Nowhere")
+   Book.objects.create(title="Python", desc="Nowhere")
+   Book.objects.create(title="Java", desc="Nowhere")
+   Book.objects.create(title="PHP", desc="Nowhere")
+   Book.objects.create(title="Ruby", desc="Nowhere")
+
+3. Author.objects.create(first_name="Jane", last_name= "Austen")
+   Author.objects.create(first_name="Emily", last_name= "Dickinson")
+   Author.objects.create(first_name="Fyodor", last_name= "Dostoevsky")
+   Author.objects.create(first_name="William", last_name= "Shakespeare")
+   Author.objects.create(first_name="Lau", last_name= "Tzu")
+
+4. python manage.py makemigrations
+   type (1)
+   "whatever"
+
+5.firstBook = Book.objects.get(id=1)
+  firstBook.title = "C#"
+  firstBook.save()
+
+6. fourthAuthor = Author.objects.get(id = 4)
+   fourthAuthor.first_name = "Bill"
+   fourthAuthor.save()
+  
+7. firstAuthor = Author.objects.get(id = 1)
+   firstBook = Book.objects.get(id = 1)
+   secondBook = Book.objects.get(id = 2)
+   firstBook.authors.add(firstAuthor)
+   secondBook.authors.add(firstAuthor)
+
+8. secondAuthor = Author.objects.get(id = 2)
+
+   firstBook = Book.objects.get(id = 1)
+   firstBook.authors.add(secondAuthor)
+               firstBook.save()
+
+   secondBook = Book.objects.get(id = 2)
+   secondBook.authors.add(secondAuthor)
+                secondBook.save()
+
+   thirdBook = Book.objects.get(id = 3)
+   thirdBook.authors.add(secondAuthor)
+                thirdBook.save()
+
+
+9. thirdAuthor = Author.objects.get(id = 3)
+
+   firstBook = Book.objects.get(id = 1)
+   firstBook.authors.add(thirdAuthor)
+
+   secondBook = Book.objects.get(id = 2)
+   secondBook.authors.add(thirdAuthor)
+
+   thirdBook = Book.objects.get(id = 3)
+   thirdBook.authors.add(thirdAuthor)
+
+   fourthBook = Book.objects.get(id = 4)
+   fourthBook.authors.add(thirdAuthor)
+
+10. fourthAuthor = Author.objects.get(id = 4)
+
+    firstBook = Book.objects.get(id = 1)
+    firstBook.authors.add(fourthAuthor)
+
+    secondBook = Book.objects.get(id = 2)
+    secondBook.authors.add(fourthAuthor)
+
+    thirdBook = Book.objects.get(id = 3)
+    thirdBook.authors.add(fourthAuthor)
+
+    fourthBook = Book.objects.get(id = 4)
+    fourthBook.authors.add(fourthAuthor)
+
+    fifthBook = Book.objects.get(id = 5)
+    fifthBook.authors.add(fourthAuthor)
+
+
+11. thirdBook.authors.all()
+
+12. thirdBook.authors.remove(firstAuthor)
+
+13. fifthAuthor = Author.objects.get(id = 5)
+    secondBook = Book.objects.get(id = 2)
+    secondBook.authors.add(fifthAuthor)
+
+14. thirdAuthor.books.all()
+
+15. fifthBook.authors.all()
+
+16. 
+
+   
+
+
+   
+
+   
+
